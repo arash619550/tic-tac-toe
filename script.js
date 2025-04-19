@@ -357,10 +357,10 @@ function checkWinO() {
     checkWin6OO();
     checkWin7OO();
     checkWin8OO();
-    if (countMove >= 9) {
-        alert("Draw");
-        location.reload();
-    }
+    // if (countMove > 9) {
+    //     alert("Draw");
+    //     location.reload();
+    // }
 }
 function checkWinX() {
     checkWin1XX();
@@ -379,10 +379,10 @@ function checkWinX() {
     checkWin6OX();
     checkWin7OX();
     checkWin8OX();
-    if (countMove >= 9) {
-        alert("Draw");
-        location.reload();
-    }
+    // if (countMove > 9) {
+    //     alert("Draw");
+    //     location.reload();
+    // }
 }
 function checkWin1XO() {
     trueMove = 0;
