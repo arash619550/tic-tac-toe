@@ -44,7 +44,17 @@ body {
     justify-content: center;
     align-items: center;
 }
-img{
+
+img {
     width: 30px;
     height: 30px;
+}
+
+#btnO,
+#btnX {
+    width: 65px;
+    border: none;
+    background-color: #d4d4d4;
+    color: white;
+    padding: 0.5px;
 }
