@@ -12,8 +12,11 @@ let count = 0;
 const cells = document.querySelectorAll(".cell");
 let o = [];
 let x = [];
+const btnO = document.querySelector(".btnO");
+const btnX = document.querySelector(".btnX");
 function movementO() {
     cells[0].addEventListener("click", function () {
+        debugger;
         const currentPlayer = document.createElement("img");
         if (count % 2 === 0) {
             currentPlayer.src = "assets/images/o.png";
@@ -174,7 +177,9 @@ function movementO() {
         }
         cells[8].appendChild(currentPlayer);
         count++;
-    }, { once: true })
+    }, { once: true });
+    btnO.classList.add("disable");
+    btnX.classList.add("disable");
 };
 function movementX() {
     cells[0].addEventListener("click", function () {
@@ -338,7 +343,9 @@ function movementX() {
         }
         cells[8].appendChild(currentPlayer);
         count++;
-    }, { once: true })
+    }, { once: true });
+    btnO.classList.add("disable");
+    btnX.classList.add("disable");
 };
 function checkWinO() {
     checkWin1XO();
