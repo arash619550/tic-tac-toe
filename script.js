@@ -16,7 +16,6 @@ const btnO = document.querySelector(".btnO");
 const btnX = document.querySelector(".btnX");
 function movementO() {
     cells[0].addEventListener("click", function () {
-        debugger;
         const currentPlayer = document.createElement("img");
         if (count % 2 === 0) {
             currentPlayer.src = "assets/images/o.png";
@@ -396,7 +395,7 @@ function checkWin1XO() {
     let win = false;
     let sortedX = x.sort();
     if (sortedX.length >= 3) {
-        for (let i = 0; i <= 3; i++) {
+        for (let i = 0; i <= 5; i++) {
             if (winCells1.includes(sortedX[i])) {
                 trueMove++;
                 if (trueMove === 3) {
@@ -415,7 +414,7 @@ function checkWin2XO() {
     let win = false;
     let sortedX = x.sort();
     if (sortedX.length >= 3) {
-        for (let i = 0; i <= 3; i++) {
+        for (let i = 0; i <= 5; i++) {
             if (winCells2.includes(sortedX[i])) {
                 trueMove++;
                 if (trueMove === 3) {
@@ -434,7 +433,7 @@ function checkWin3XO() {
     let win = false;
     let sortedX = x.sort();
     if (sortedX.length >= 3) {
-        for (let i = 0; i <= 3; i++) {
+        for (let i = 0; i <= 5; i++) {
             if (winCells3.includes(sortedX[i])) {
                 trueMove++;
                 if (trueMove === 3) {
@@ -453,7 +452,7 @@ function checkWin4XO() {
     let win = false;
     let sortedX = x.sort();
     if (sortedX.length >= 3) {
-        for (let i = 0; i <= 3; i++) {
+        for (let i = 0; i <= 5; i++) {
             if (winCells4.includes(sortedX[i])) {
                 trueMove++;
                 if (trueMove === 3) {
@@ -472,7 +471,7 @@ function checkWin5XO() {
     let win = false;
     let sortedX = x.sort();
     if (sortedX.length >= 3) {
-        for (let i = 0; i <= 3; i++) {
+        for (let i = 0; i <= 5; i++) {
             if (winCells5.includes(sortedX[i])) {
                 trueMove++;
                 if (trueMove === 3) {
@@ -491,7 +490,7 @@ function checkWin6XO() {
     let win = false;
     let sortedX = x.sort();
     if (sortedX.length >= 3) {
-        for (let i = 0; i <= 3; i++) {
+        for (let i = 0; i <= 5; i++) {
             if (winCells6.includes(sortedX[i])) {
                 trueMove++;
                 if (trueMove === 3) {
@@ -510,7 +509,7 @@ function checkWin7XO() {
     let win = false;
     let sortedX = x.sort();
     if (sortedX.length >= 3) {
-        for (let i = 0; i <= 3; i++) {
+        for (let i = 0; i <= 5; i++) {
             if (winCells7.includes(sortedX[i])) {
                 trueMove++;
                 if (trueMove === 3) {
@@ -529,7 +528,7 @@ function checkWin8XO() {
     let win = false;
     let sortedX = x.sort();
     if (sortedX.length >= 3) {
-        for (let i = 0; i <= 3; i++) {
+        for (let i = 0; i <= 5; i++) {
             if (winCells8.includes(sortedX[i])) {
                 trueMove++;
                 if (trueMove === 3) {
@@ -548,7 +547,7 @@ function checkWin1OO() {
     let win = false;
     let sortedO = o.sort();
     if (sortedO.length >= 3) {
-        for (let i = 0; i <= 3; i++) {
+        for (let i = 0; i <= 5; i++) {
             if (winCells1.includes(sortedO[i])) {
                 trueMove++;
                 if (trueMove === 3) {
@@ -567,7 +566,7 @@ function checkWin2OO() {
     let win = false;
     let sortedO = o.sort();
     if (sortedO.length >= 3) {
-        for (let i = 0; i <= 3; i++) {
+        for (let i = 0; i <= 5; i++) {
             if (winCells2.includes(sortedO[i])) {
                 trueMove++;
                 if (trueMove === 3) {
@@ -586,7 +585,7 @@ function checkWin3OO() {
     let win = false;
     let sortedO = o.sort();
     if (sortedO.length >= 3) {
-        for (let i = 0; i <= 3; i++) {
+        for (let i = 0; i <= 5; i++) {
             if (winCells3.includes(sortedO[i])) {
                 trueMove++;
                 if (trueMove === 3) {
@@ -605,7 +604,7 @@ function checkWin4OO() {
     let win = false;
     let sortedO = o.sort();
     if (sortedO.length >= 3) {
-        for (let i = 0; i <= 3; i++) {
+        for (let i = 0; i <= 5; i++) {
             if (winCells4.includes(sortedO[i])) {
                 trueMove++;
                 if (trueMove === 3) {
@@ -624,7 +623,7 @@ function checkWin5OO() {
     let win = false;
     let sortedO = o.sort();
     if (sortedO.length >= 3) {
-        for (let i = 0; i <= 3; i++) {
+        for (let i = 0; i <= 5; i++) {
             if (winCells5.includes(sortedO[i])) {
                 trueMove++;
                 if (trueMove === 3) {
@@ -643,7 +642,7 @@ function checkWin6OO() {
     let win = false;
     let sortedO = o.sort();
     if (sortedO.length >= 3) {
-        for (let i = 0; i <= 3; i++) {
+        for (let i = 0; i <= 5; i++) {
             if (winCells6.includes(sortedO[i])) {
                 trueMove++;
                 if (trueMove === 3) {
@@ -662,7 +661,7 @@ function checkWin7OO() {
     let win = false;
     let sortedO = o.sort();
     if (sortedO.length >= 3) {
-        for (let i = 0; i <= 3; i++) {
+        for (let i = 0; i <= 5; i++) {
             if (winCells7.includes(sortedO[i])) {
                 trueMove++;
                 if (trueMove === 3) {
@@ -681,7 +680,7 @@ function checkWin8OO() {
     let win = false;
     let sortedO = o.sort();
     if (sortedO.length >= 3) {
-        for (let i = 0; i <= 3; i++) {
+        for (let i = 0; i <= 5; i++) {
             if (winCells8.includes(sortedO[i])) {
                 trueMove++;
                 if (trueMove === 3) {
@@ -700,7 +699,7 @@ function checkWin1XX() {
     let win = false;
     let sortedX = x.sort();
     if (sortedX.length >= 3) {
-        for (let i = 0; i <= 3; i++) {
+        for (let i = 0; i <= 5; i++) {
             if (winCells1.includes(sortedX[i])) {
                 trueMove++;
                 if (trueMove === 3) {
@@ -719,7 +718,7 @@ function checkWin2XX() {
     let win = false;
     let sortedX = x.sort();
     if (sortedX.length >= 3) {
-        for (let i = 0; i <= 3; i++) {
+        for (let i = 0; i <= 5; i++) {
             if (winCells2.includes(sortedX[i])) {
                 trueMove++;
                 if (trueMove === 3) {
@@ -738,7 +737,7 @@ function checkWin3XX() {
     let win = false;
     let sortedX = x.sort();
     if (sortedX.length >= 3) {
-        for (let i = 0; i <= 3; i++) {
+        for (let i = 0; i <= 5; i++) {
             if (winCells3.includes(sortedX[i])) {
                 trueMove++;
                 if (trueMove === 3) {
@@ -757,7 +756,7 @@ function checkWin4XX() {
     let win = false;
     let sortedX = x.sort();
     if (sortedX.length >= 3) {
-        for (let i = 0; i <= 3; i++) {
+        for (let i = 0; i <= 5; i++) {
             if (winCells4.includes(sortedX[i])) {
                 trueMove++;
                 if (trueMove === 3) {
@@ -776,7 +775,7 @@ function checkWin5XX() {
     let win = false;
     let sortedX = x.sort();
     if (sortedX.length >= 3) {
-        for (let i = 0; i <= 3; i++) {
+        for (let i = 0; i <= 5; i++) {
             if (winCells5.includes(sortedX[i])) {
                 trueMove++;
                 if (trueMove === 3) {
@@ -795,7 +794,7 @@ function checkWin6XX() {
     let win = false;
     let sortedX = x.sort();
     if (sortedX.length >= 3) {
-        for (let i = 0; i <= 3; i++) {
+        for (let i = 0; i <= 5; i++) {
             if (winCells6.includes(sortedX[i])) {
                 trueMove++;
                 if (trueMove === 3) {
@@ -814,7 +813,7 @@ function checkWin7XX() {
     let win = false;
     let sortedX = x.sort();
     if (sortedX.length >= 3) {
-        for (let i = 0; i <= 3; i++) {
+        for (let i = 0; i <= 5; i++) {
             if (winCells7.includes(sortedX[i])) {
                 trueMove++;
                 if (trueMove === 3) {
@@ -833,7 +832,7 @@ function checkWin8XX() {
     let win = false;
     let sortedX = x.sort();
     if (sortedX.length >= 3) {
-        for (let i = 0; i <= 3; i++) {
+        for (let i = 0; i <= 5; i++) {
             if (winCells8.includes(sortedX[i])) {
                 trueMove++;
                 if (trueMove === 3) {
@@ -852,7 +851,7 @@ function checkWin1OX() {
     let win = false;
     let sortedO = o.sort();
     if (sortedO.length >= 3) {
-        for (let i = 0; i <= 3; i++) {
+        for (let i = 0; i <= 5; i++) {
             if (winCells1.includes(sortedO[i])) {
                 trueMove++;
                 if (trueMove === 3) {
@@ -871,7 +870,7 @@ function checkWin2OX() {
     let win = false;
     let sortedO = o.sort();
     if (sortedO.length >= 3) {
-        for (let i = 0; i <= 3; i++) {
+        for (let i = 0; i <= 5; i++) {
             if (winCells2.includes(sortedO[i])) {
                 trueMove++;
                 if (trueMove === 3) {
@@ -890,7 +889,7 @@ function checkWin3OX() {
     let win = false;
     let sortedO = o.sort();
     if (sortedO.length >= 3) {
-        for (let i = 0; i <= 3; i++) {
+        for (let i = 0; i <= 5; i++) {
             if (winCells3.includes(sortedO[i])) {
                 trueMove++;
                 if (trueMove === 3) {
@@ -909,7 +908,7 @@ function checkWin4OX() {
     let win = false;
     let sortedO = o.sort();
     if (sortedO.length >= 3) {
-        for (let i = 0; i <= 3; i++) {
+        for (let i = 0; i <= 5; i++) {
             if (winCells4.includes(sortedO[i])) {
                 trueMove++;
                 if (trueMove === 3) {
@@ -928,7 +927,7 @@ function checkWin5OX() {
     let win = false;
     let sortedO = o.sort();
     if (sortedO.length >= 3) {
-        for (let i = 0; i <= 3; i++) {
+        for (let i = 0; i <= 5; i++) {
             if (winCells5.includes(sortedO[i])) {
                 trueMove++;
                 if (trueMove === 3) {
@@ -947,7 +946,7 @@ function checkWin6OX() {
     let win = false;
     let sortedO = o.sort();
     if (sortedO.length >= 3) {
-        for (let i = 0; i <= 3; i++) {
+        for (let i = 0; i <= 5; i++) {
             if (winCells6.includes(sortedO[i])) {
                 trueMove++;
                 if (trueMove === 3) {
@@ -966,7 +965,7 @@ function checkWin7OX() {
     let win = false;
     let sortedO = o.sort();
     if (sortedO.length >= 3) {
-        for (let i = 0; i <= 3; i++) {
+        for (let i = 0; i <= 5; i++) {
             if (winCells7.includes(sortedO[i])) {
                 trueMove++;
                 if (trueMove === 3) {
@@ -985,7 +984,7 @@ function checkWin8OX() {
     let win = false;
     let sortedO = o.sort();
     if (sortedO.length >= 3) {
-        for (let i = 0; i <= 3; i++) {
+        for (let i = 0; i <= 5; i++) {
             if (winCells8.includes(sortedO[i])) {
                 trueMove++;
                 if (trueMove === 3) {
