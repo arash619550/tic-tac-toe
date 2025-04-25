@@ -17,7 +17,6 @@ body {
     justify-content: center;
     height: 100vh;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-
 }
 
 .h1 {
@@ -61,3 +60,4 @@ img {
 .disable{
     pointer-events: none;
 }
+

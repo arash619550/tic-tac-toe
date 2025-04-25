@@ -9,11 +9,24 @@ const winCells8 = [2, 4, 6];
 let trueMove = 0;
 let countMove = 0;
 let count = 0;
+let countShow = 0;
+const h2 = document.querySelector(".h2");
 const cells = document.querySelectorAll(".cell");
 let o = [];
 let x = [];
 const btnO = document.querySelector(".btnO");
 const btnX = document.querySelector(".btnX");
+function startGame() {
+    btnO.addEventListener("click", function () {
+        h2.innerHTML = "O's turn";
+        countShow = 0;
+    }, { once: true });
+    btnX.addEventListener("click", function () {
+        h2.innerHTML = "X's turn";
+    }, { once: true });
+    countShow = 1;
+}
+startGame();
 function movementO() {
     cells[0].addEventListener("click", function () {
         const currentPlayer = document.createElement("img");
@@ -32,6 +45,8 @@ function movementO() {
         }
         cells[0].appendChild(currentPlayer);
         count++;
+        showCurrentPlayerO();
+
     }, { once: true });
     cells[1].addEventListener("click", function () {
         const currentPlayer = document.createElement("img");
@@ -50,6 +65,8 @@ function movementO() {
         }
         cells[1].appendChild(currentPlayer);
         count++;
+        showCurrentPlayerO();
+
     }, { once: true })
     cells[2].addEventListener("click", function () {
         const currentPlayer = document.createElement("img");
@@ -68,6 +85,8 @@ function movementO() {
         }
         cells[2].appendChild(currentPlayer);
         count++;
+        showCurrentPlayerO();
+
     }, { once: true })
     cells[3].addEventListener("click", function () {
         const currentPlayer = document.createElement("img");
@@ -85,6 +104,8 @@ function movementO() {
                 checkWinO();
         }
         cells[3].appendChild(currentPlayer);
+        showCurrentPlayerO();
+
         count++;
     }, { once: true })
     cells[4].addEventListener("click", function () {
@@ -104,6 +125,8 @@ function movementO() {
         }
         cells[4].appendChild(currentPlayer);
         count++;
+        showCurrentPlayerO();
+
     }, { once: true })
     cells[5].addEventListener("click", function () {
         const currentPlayer = document.createElement("img");
@@ -122,6 +145,8 @@ function movementO() {
         }
         cells[5].appendChild(currentPlayer);
         count++;
+        showCurrentPlayerO();
+
     }, { once: true })
     cells[6].addEventListener("click", function () {
         const currentPlayer = document.createElement("img");
@@ -140,6 +165,8 @@ function movementO() {
         }
         cells[6].appendChild(currentPlayer);
         count++;
+        showCurrentPlayerO();
+
     }, { once: true })
     cells[7].addEventListener("click", function () {
         const currentPlayer = document.createElement("img");
@@ -158,6 +185,8 @@ function movementO() {
         }
         cells[7].appendChild(currentPlayer);
         count++;
+        showCurrentPlayerO();
+
     }, { once: true })
     cells[8].addEventListener("click", function () {
         const currentPlayer = document.createElement("img");
@@ -176,6 +205,7 @@ function movementO() {
         }
         cells[8].appendChild(currentPlayer);
         count++;
+        showCurrentPlayerO();
     }, { once: true });
     btnO.classList.add("disable");
     btnX.classList.add("disable");
@@ -198,6 +228,8 @@ function movementX() {
         }
         cells[0].appendChild(currentPlayer);
         count++;
+        showCurrentPlayerX();
+
     }, { once: true });
     cells[1].addEventListener("click", function () {
         const currentPlayer = document.createElement("img");
@@ -216,6 +248,8 @@ function movementX() {
         }
         cells[1].appendChild(currentPlayer);
         count++;
+        showCurrentPlayerX();
+
     }, { once: true })
     cells[2].addEventListener("click", function () {
         const currentPlayer = document.createElement("img");
@@ -234,6 +268,8 @@ function movementX() {
         }
         cells[2].appendChild(currentPlayer);
         count++;
+        showCurrentPlayerX();
+
     }, { once: true })
     cells[3].addEventListener("click", function () {
         const currentPlayer = document.createElement("img");
@@ -252,6 +288,8 @@ function movementX() {
         }
         cells[3].appendChild(currentPlayer);
         count++;
+        showCurrentPlayerX();
+
     }, { once: true })
     cells[4].addEventListener("click", function () {
         const currentPlayer = document.createElement("img");
@@ -270,6 +308,8 @@ function movementX() {
         }
         cells[4].appendChild(currentPlayer);
         count++;
+        showCurrentPlayerX();
+
     }, { once: true })
     cells[5].addEventListener("click", function () {
         const currentPlayer = document.createElement("img");
@@ -288,6 +328,8 @@ function movementX() {
         }
         cells[5].appendChild(currentPlayer);
         count++;
+        showCurrentPlayerX();
+
     }, { once: true })
     cells[6].addEventListener("click", function () {
         const currentPlayer = document.createElement("img");
@@ -306,6 +348,8 @@ function movementX() {
         }
         cells[6].appendChild(currentPlayer);
         count++;
+        showCurrentPlayerX();
+
     }, { once: true })
     cells[7].addEventListener("click", function () {
         const currentPlayer = document.createElement("img");
@@ -324,6 +368,8 @@ function movementX() {
         }
         cells[7].appendChild(currentPlayer);
         count++;
+        showCurrentPlayerX();
+
     }, { once: true })
     cells[8].addEventListener("click", function () {
         const currentPlayer = document.createElement("img");
@@ -342,9 +388,12 @@ function movementX() {
         }
         cells[8].appendChild(currentPlayer);
         count++;
+        showCurrentPlayerX();
+
     }, { once: true });
     btnO.classList.add("disable");
     btnX.classList.add("disable");
+    showCurrentPlayer();
 };
 function checkWinO() {
     checkWin1XO();
@@ -363,10 +412,6 @@ function checkWinO() {
     checkWin6OO();
     checkWin7OO();
     checkWin8OO();
-    // if (countMove > 9) {
-    //     alert("Draw");
-    //     location.reload();
-    // }
 }
 function checkWinX() {
     checkWin1XX();
@@ -385,10 +430,6 @@ function checkWinX() {
     checkWin6OX();
     checkWin7OX();
     checkWin8OX();
-    // if (countMove > 9) {
-    //     alert("Draw");
-    //     location.reload();
-    // }
 }
 function checkWin1XO() {
     trueMove = 0;
@@ -997,4 +1038,20 @@ function checkWin8OX() {
         alert("X wins");
         location.reload();
     }
+}
+function showCurrentPlayerO() {
+    if (countShow % 2 === 0) {
+        h2.innerHTML = "X's turn";
+    } else {
+        h2.innerHTML = "O's turn";
+    }
+    countShow++;
+}
+function showCurrentPlayerX() {
+    if (countShow % 2 === 0) {
+        h2.innerHTML = "X's turn";
+    } else {
+        h2.innerHTML = "O's turn";
+    }
+    countShow++;
 }
