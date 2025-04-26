@@ -446,8 +446,8 @@ function checkWin1XO() {
         }
     }
     if (win) {
-        alert("X wins");
-        location.reload();
+        winX();
+
     }
 }
 function checkWin2XO() {
@@ -465,8 +465,8 @@ function checkWin2XO() {
         }
     }
     if (win) {
-        alert("X wins");
-        location.reload();
+        winX();
+
     }
 }
 function checkWin3XO() {
@@ -484,8 +484,8 @@ function checkWin3XO() {
         }
     }
     if (win) {
-        alert("X wins");
-        location.reload();
+        winX();
+
     }
 }
 function checkWin4XO() {
@@ -503,8 +503,8 @@ function checkWin4XO() {
         }
     }
     if (win) {
-        alert("X wins");
-        location.reload();
+        winX();
+
     }
 }
 function checkWin5XO() {
@@ -522,8 +522,8 @@ function checkWin5XO() {
         }
     }
     if (win) {
-        alert("X wins");
-        location.reload();
+        winX();
+
     }
 }
 function checkWin6XO() {
@@ -541,8 +541,8 @@ function checkWin6XO() {
         }
     }
     if (win) {
-        alert("X wins");
-        location.reload();
+        winX();
+
     }
 }
 function checkWin7XO() {
@@ -560,8 +560,8 @@ function checkWin7XO() {
         }
     }
     if (win) {
-        alert("X wins");
-        location.reload();
+        winX();
+
     }
 }
 function checkWin8XO() {
@@ -579,8 +579,8 @@ function checkWin8XO() {
         }
     }
     if (win) {
-        alert("X wins");
-        location.reload();
+        winX();
+
     }
 }
 function checkWin1OO() {
@@ -598,8 +598,8 @@ function checkWin1OO() {
         }
     }
     if (win) {
-        alert("O wins");
-        location.reload();
+        winO();
+
     }
 }
 function checkWin2OO() {
@@ -617,8 +617,8 @@ function checkWin2OO() {
         }
     }
     if (win) {
-        alert("O wins");
-        location.reload();
+        winO();
+
     }
 }
 function checkWin3OO() {
@@ -636,8 +636,8 @@ function checkWin3OO() {
         }
     }
     if (win) {
-        alert("O wins");
-        location.reload();
+        winO();
+
     }
 }
 function checkWin4OO() {
@@ -655,8 +655,8 @@ function checkWin4OO() {
         }
     }
     if (win) {
-        alert("O wins");
-        location.reload();
+        winO();
+
     }
 }
 function checkWin5OO() {
@@ -674,8 +674,8 @@ function checkWin5OO() {
         }
     }
     if (win) {
-        alert("O wins");
-        location.reload();
+        winO();
+
     }
 }
 function checkWin6OO() {
@@ -693,8 +693,8 @@ function checkWin6OO() {
         }
     }
     if (win) {
-        alert("O wins");
-        location.reload();
+        winO();
+
     }
 }
 function checkWin7OO() {
@@ -712,8 +712,8 @@ function checkWin7OO() {
         }
     }
     if (win) {
-        alert("O wins");
-        location.reload();
+        winO();
+
     }
 }
 function checkWin8OO() {
@@ -731,8 +731,8 @@ function checkWin8OO() {
         }
     }
     if (win) {
-        alert("O wins");
-        location.reload();
+        winO();
+
     }
 }
 function checkWin1XX() {
@@ -750,8 +750,8 @@ function checkWin1XX() {
         }
     }
     if (win) {
-        alert("O wins");
-        location.reload();
+        winO();
+
     }
 }
 function checkWin2XX() {
@@ -769,8 +769,8 @@ function checkWin2XX() {
         }
     }
     if (win) {
-        alert("O wins");
-        location.reload();
+        winO();
+
     }
 }
 function checkWin3XX() {
@@ -788,8 +788,8 @@ function checkWin3XX() {
         }
     }
     if (win) {
-        alert("O wins");
-        location.reload();
+        winO();
+
     }
 }
 function checkWin4XX() {
@@ -807,8 +807,8 @@ function checkWin4XX() {
         }
     }
     if (win) {
-        alert("O wins");
-        location.reload();
+        winO();
+
     }
 }
 function checkWin5XX() {
@@ -826,8 +826,8 @@ function checkWin5XX() {
         }
     }
     if (win) {
-        alert("O wins");
-        location.reload();
+        winO();
+
     }
 }
 function checkWin6XX() {
@@ -845,8 +845,8 @@ function checkWin6XX() {
         }
     }
     if (win) {
-        alert("O wins");
-        location.reload();
+        winO();
+
     }
 }
 function checkWin7XX() {
@@ -864,8 +864,8 @@ function checkWin7XX() {
         }
     }
     if (win) {
-        alert("O wins");
-        location.reload();
+        winO();
+
     }
 }
 function checkWin8XX() {
@@ -883,8 +883,8 @@ function checkWin8XX() {
         }
     }
     if (win) {
-        alert("O wins");
-        location.reload();
+        winO();
+
     }
 }
 function checkWin1OX() {
@@ -902,8 +902,8 @@ function checkWin1OX() {
         }
     }
     if (win) {
-        alert("X wins");
-        location.reload();
+        winX();
+
     }
 }
 function checkWin2OX() {
@@ -921,8 +921,8 @@ function checkWin2OX() {
         }
     }
     if (win) {
-        alert("X wins");
-        location.reload();
+        winX();
+
     }
 }
 function checkWin3OX() {
@@ -940,8 +940,8 @@ function checkWin3OX() {
         }
     }
     if (win) {
-        alert("X wins");
-        location.reload();
+        winX();
+
     }
 }
 function checkWin4OX() {
@@ -959,8 +959,8 @@ function checkWin4OX() {
         }
     }
     if (win) {
-        alert("X wins");
-        location.reload();
+        winX();
+
     }
 }
 function checkWin5OX() {
@@ -978,8 +978,8 @@ function checkWin5OX() {
         }
     }
     if (win) {
-        alert("X wins");
-        location.reload();
+        winX();
+
     }
 }
 function checkWin6OX() {
@@ -997,8 +997,8 @@ function checkWin6OX() {
         }
     }
     if (win) {
-        alert("X wins");
-        location.reload();
+        winX();
+
     }
 }
 function checkWin7OX() {
@@ -1016,8 +1016,8 @@ function checkWin7OX() {
         }
     }
     if (win) {
-        alert("X wins");
-        location.reload();
+        winX();
+
     }
 }
 function checkWin8OX() {
@@ -1035,8 +1035,8 @@ function checkWin8OX() {
         }
     }
     if (win) {
-        alert("X wins");
-        location.reload();
+        winX();
+
     }
 }
 function showCurrentPlayerO() {
@@ -1054,4 +1054,17 @@ function showCurrentPlayerX() {
         h2.innerHTML = "O's turn";
     }
     countShow++;
+}
+function winX() {
+    document.querySelector(".alert-x").style.display = "block";
+    for (let i = 0; i < cells.length; i++) {
+        cells[i].style.pointerEvents = "none";
+    }
+}
+
+function winO() {
+    document.querySelector(".alert-o").style.display = "block";
+    for (let i = 0; i < cells.length; i++) {
+        cells[i].style.pointerEvents = "none";
+    }
 }
