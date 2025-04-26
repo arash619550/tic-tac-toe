@@ -10,6 +10,9 @@ let trueMove = 0;
 let countMove = 0;
 let count = 0;
 let countShow = 0;
+let winXBool = false;
+let winOBool = false;
+let drawBool = false;
 const h2 = document.querySelector(".h2");
 const cells = document.querySelectorAll(".cell");
 let o = [];
@@ -43,6 +46,9 @@ function movementO() {
             if (countMove >= 3)
                 checkWinO();
         }
+        if (countMove == cells.length) {
+            draw();
+        }
         cells[0].appendChild(currentPlayer);
         count++;
         showCurrentPlayerO();
@@ -62,6 +68,9 @@ function movementO() {
             countMove++;
             if (countMove >= 3)
                 checkWinO();
+        }
+        if (countMove == cells.length) {
+            draw();
         }
         cells[1].appendChild(currentPlayer);
         count++;
@@ -83,6 +92,9 @@ function movementO() {
             if (countMove >= 3)
                 checkWinO();
         }
+        if (countMove == cells.length) {
+            draw();
+        }
         cells[2].appendChild(currentPlayer);
         count++;
         showCurrentPlayerO();
@@ -102,6 +114,9 @@ function movementO() {
             countMove++;
             if (countMove >= 3)
                 checkWinO();
+        }
+        if (countMove == cells.length) {
+            draw();
         }
         cells[3].appendChild(currentPlayer);
         showCurrentPlayerO();
@@ -123,6 +138,9 @@ function movementO() {
             if (countMove >= 3)
                 checkWinO();
         }
+        if (countMove == cells.length) {
+            draw();
+        }
         cells[4].appendChild(currentPlayer);
         count++;
         showCurrentPlayerO();
@@ -142,6 +160,9 @@ function movementO() {
             countMove++;
             if (countMove >= 3)
                 checkWinO();
+        }
+        if (countMove == cells.length) {
+            draw();
         }
         cells[5].appendChild(currentPlayer);
         count++;
@@ -163,6 +184,9 @@ function movementO() {
             if (countMove >= 3)
                 checkWinO();
         }
+        if (countMove == cells.length) {
+            draw();
+        }
         cells[6].appendChild(currentPlayer);
         count++;
         showCurrentPlayerO();
@@ -183,6 +207,9 @@ function movementO() {
             if (countMove >= 3)
                 checkWinO();
         }
+        if (countMove == cells.length) {
+            draw();
+        }
         cells[7].appendChild(currentPlayer);
         count++;
         showCurrentPlayerO();
@@ -202,6 +229,9 @@ function movementO() {
             countMove++;
             if (countMove >= 3)
                 checkWinO();
+        }
+        if (countMove == cells.length) {
+            draw();
         }
         cells[8].appendChild(currentPlayer);
         count++;
@@ -226,6 +256,9 @@ function movementX() {
             if (countMove >= 3)
                 checkWinX();
         }
+        if (countMove == cells.length) {
+            draw();
+        }
         cells[0].appendChild(currentPlayer);
         count++;
         showCurrentPlayerX();
@@ -245,6 +278,9 @@ function movementX() {
             countMove++;
             if (countMove >= 3)
                 checkWinX();
+        }
+        if (countMove == cells.length) {
+            draw();
         }
         cells[1].appendChild(currentPlayer);
         count++;
@@ -266,6 +302,9 @@ function movementX() {
             if (countMove >= 3)
                 checkWinX();
         }
+        if (countMove == cells.length) {
+            draw();
+        }
         cells[2].appendChild(currentPlayer);
         count++;
         showCurrentPlayerX();
@@ -285,6 +324,9 @@ function movementX() {
             countMove++;
             if (countMove >= 3)
                 checkWinX();
+        }
+        if (countMove == cells.length) {
+            draw();
         }
         cells[3].appendChild(currentPlayer);
         count++;
@@ -306,6 +348,9 @@ function movementX() {
             if (countMove >= 3)
                 checkWinX();
         }
+        if (countMove == cells.length) {
+            draw();
+        }
         cells[4].appendChild(currentPlayer);
         count++;
         showCurrentPlayerX();
@@ -325,6 +370,9 @@ function movementX() {
             countMove++;
             if (countMove >= 3)
                 checkWinX();
+        }
+        if (countMove == cells.length) {
+            draw();
         }
         cells[5].appendChild(currentPlayer);
         count++;
@@ -346,6 +394,9 @@ function movementX() {
             if (countMove >= 3)
                 checkWinX();
         }
+        if (countMove == cells.length) {
+            draw();
+        }
         cells[6].appendChild(currentPlayer);
         count++;
         showCurrentPlayerX();
@@ -366,6 +417,9 @@ function movementX() {
             if (countMove >= 3)
                 checkWinX();
         }
+        if (countMove == cells.length) {
+            draw();
+        }
         cells[7].appendChild(currentPlayer);
         count++;
         showCurrentPlayerX();
@@ -385,6 +439,9 @@ function movementX() {
             countMove++;
             if (countMove >= 3)
                 checkWinX();
+        }
+        if (countMove == cells.length) {
+            draw();
         }
         cells[8].appendChild(currentPlayer);
         count++;
@@ -430,6 +487,15 @@ function checkWinX() {
     checkWin6OX();
     checkWin7OX();
     checkWin8OX();
+}
+function draw() {
+    for (let i = 0; i < cells.length; i++) {
+        if (cells[i].length != "" && winOBool === false && winXBool === false) {
+            drawBool = true;
+        }
+    }
+    if (drawBool)
+        draw();
 }
 function checkWin1XO() {
     trueMove = 0;
@@ -1040,6 +1106,8 @@ function checkWin8OX() {
     }
 }
 function showCurrentPlayerO() {
+    if (winXBool || winOBool)
+        return;
     if (countShow % 2 === 0) {
         h2.innerHTML = "X's turn";
     } else {
@@ -1048,6 +1116,8 @@ function showCurrentPlayerO() {
     countShow++;
 }
 function showCurrentPlayerX() {
+    if (winXBool || winOBool)
+        return;
     if (countShow % 2 === 0) {
         h2.innerHTML = "X's turn";
     } else {
@@ -1056,15 +1126,25 @@ function showCurrentPlayerX() {
     countShow++;
 }
 function winX() {
+    h2.innerHTML = "";
     document.querySelector(".alert-x").style.display = "block";
     for (let i = 0; i < cells.length; i++) {
         cells[i].style.pointerEvents = "none";
     }
+    winXBool = true;
+
 }
 
 function winO() {
+    h2.innerHTML = "";
     document.querySelector(".alert-o").style.display = "block";
     for (let i = 0; i < cells.length; i++) {
         cells[i].style.pointerEvents = "none";
     }
+    winOBool = true;
+
+}
+
+function draw() {
+    document.querySelector(".draw").style.display = "block";
 }

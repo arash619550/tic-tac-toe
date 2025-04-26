@@ -75,7 +75,20 @@ img {
     color: white;
     display: none;
 }
+
 .alert-o {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    background-color: #414f65;
+    padding: 12px;
+    border-radius: 1px;
+    color: white;
+    display: none;
+}
+.draw {
     position: absolute;
     top: 50%;
     left: 50%;
